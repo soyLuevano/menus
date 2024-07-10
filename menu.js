@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function createFoodImage(x, y) {
         const hamburguesaImage = document.createElement('img');
-        hamburguesaImage.src = 'https://images.vexels.com/content/149877/preview/hotdog-character-cartoon-897c9e.png';
+        hamburguesaImage.src = 'https://png.pngtree.com/png-clipart/20221115/ourmid/pngtree-cartoon-donuts-png-image_6455090.png';
         hamburguesaImage.alt = 'Hamburguesa';
         hamburguesaImage.style.position = 'absolute';
         hamburguesaImage.style.left = `${x}px`;
