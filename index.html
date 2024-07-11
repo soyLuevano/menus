@@ -1,52 +1,68 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú del Restaurante</title>
-    <link rel="stylesheet" href="menu.css">
-</head>
-<body>
-    <header>
-        <h1>Hamburguesas "El Pitbull"</h1>
-    </header>
-    <main>
-        <section id="entradas">
-            <h2>Entradas</h2>
-            <ul>
-                <li><img src="https://mandolina.co/wp-content/uploads/2021/03/610747100-1.jpg" alt="Hamburguesa">Hamburguesa - $10</li>
-                <li><img src="https://static.wixstatic.com/media/196ca8_6773e5c607b447b7b20f5db3c65199ea~mv2.jpeg/v1/fill/w_980,h_490,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/196ca8_6773e5c607b447b7b20f5db3c65199ea~mv2.jpeg" alt="Hotdog">Hotdog - $8</li>
-            </ul>
-        </section>
-        <section id="platos-principales">
-            <h2>Platos Principales</h2>
-            <ul>
-                <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNA4WLoOJjR5xcfHROKHZf61sZir8K8EpYlw&s" alt="Hamburguesa">Hamburguesa Especial - $15</li>
-                <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYIHc-BopECpPQy1e9mQySDGu-8npsa3ckZg&s" alt="Hotdog">Hotdog con Todo - $12</li>
-            </ul>
-        </section>
-        <section id="postres">
-            <h2>Postres</h2>
-            <ul>
-                <li>Cheesecake - $6</li>
-                <li>Helado de Vainilla - $5</li>
-                <li>Helado2 de Vainilla - $5</li>
-            </ul>
-        </section>
-        <section id="comentarios">
-            <button onclick="showComments()">Comentarios y Sugerencias</button>
-        </section>
-    </main>
-    <footer id="footer">
-        <p>&copy; 2024 Nuevo Milenio Calle Nicolas bravo #4747</p>
-    </footer>
-    <div id="food-rain"></div> <!-- Contenedor para la lluvia de comida -->
-    <div id="food-images" style="display: none;">
-        <!-- Aquí poner las imágenes de la lluvia -->
-        <img src="https://png.pngtree.com/png-clipart/20230913/original/pngtree-nachos-clipart-yellow-crispy-cheesy-nachos-on-a-plate-cartoon-vector-png-image_11059352.png" alt="nachos">
-        <img src="https://images.vexels.com/content/230823/preview/happy-hamburger-cartoon-b52c74.png" alt="Hamburguesa">
-        <img src="https://images.vexels.com/content/149877/preview/hotdog-character-cartoon-897c9e.png" alt="Hotdog con Todo">
-    </div>
-    <script src="menu.js"></script>
-</body>
-</html>
+document.addEventListener("DOMContentLoaded", function() {
+    const footer = document.getElementById("footer");
+
+    function checkScroll() {
+        if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
+            footer.style.display = "block";
+        } else {
+            footer.style.display = "none";
+        }
+    }
+
+    window.addEventListener("scroll", checkScroll);
+    window.addEventListener("resize", checkScroll);
+    checkScroll();  // Inicializa el estado del footer al cargar la página
+
+    // Lluvia de comida
+    const foodRainContainer = document.getElementById("food-rain");
+    const foodImages = Array.from(document.querySelectorAll("#food-images img")).map(img => img.src);
+
+    function createFood() {
+        const food = document.createElement("img");
+        food.src = foodImages[Math.floor(Math.random() * foodImages.length)];
+        food.className = "food";
+        food.style.left = Math.random() * 100 + "vw";
+        food.style.animationDuration = Math.random() * 3 + 2 + "s"; // Duración aleatoria entre 2s y 5s
+        foodRainContainer.appendChild(food);
+
+        // Eliminar el elemento después de que termine la animación
+        food.addEventListener("animationend", function() {
+            food.remove();
+        });
+    }
+
+    // Crear comida cada 3000ms
+    setInterval(createFood, 3000);
+
+    // Mostrar una hamburguesa al hacer clic en la pantalla o mover el mouse
+    document.addEventListener('click', function(event) {
+        createFoodImage(event.clientX, event.clientY);
+    });
+
+    document.addEventListener('mousemove', function(event) {
+        createFoodImage(event.clientX, event.clientY);
+    });
+
+    function createFoodImage(x, y) {
+        const hamburguesaImage = document.createElement('img');
+        hamburguesaImage.src = 'https://png.pngtree.com/png-clipart/20221115/ourmid/pngtree-cartoon-donuts-png-image_6455090.png';
+        hamburguesaImage.alt = 'Hamburguesa';
+        hamburguesaImage.style.position = 'absolute';
+        hamburguesaImage.style.left = `${x}px`;
+        hamburguesaImage.style.top = `${y}px`;
+        hamburguesaImage.style.width = '50px';  // Ajusta el ancho de la imagen
+        hamburguesaImage.style.height = 'auto'; // Mantén la proporción automáticamente
+        document.body.appendChild(hamburguesaImage);
+    
+        // Eliminar la hamburguesa después de un tiempo
+        setTimeout(() => {
+            hamburguesaImage.remove();
+        }, 2000); // Eliminar después de 2 segundos
+    }    
+
+});
+
+function showComments() {
+    alert("Aquí puedes dejar tus comentarios y sugerencias.");
+}
+
