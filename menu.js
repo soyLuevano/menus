@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Crear comida cada 900ms
+    // Crear comida cada 3000ms
     setInterval(createFood, 3000);
 
     // Mostrar una hamburguesa al hacer clic en la pantalla o mover el mouse
