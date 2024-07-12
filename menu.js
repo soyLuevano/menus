@@ -104,8 +104,8 @@ function showComments() {
     modalContainer.appendChild(gameContainer);
 
     let burgerPosition = 150;
-let gravity = 1;
-let jumpPower = 12;
+let gravity = 2;
+let jumpPower = 15;
 let isJumping = false;
 let isGameOver = false;
 let score = 0;
