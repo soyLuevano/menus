@@ -110,7 +110,7 @@ let isJumping = false;
 let isGameOver = false;
 let score = 0;
 let obstacleSpeed = 2; // Velocidad inicial
-let speedIncreaseAmount = 1; // Incremento de velocidad
+let speedIncreaseAmount = 2; // Incremento de velocidad
 
 const ingredients = [
     'https://png.pngtree.com/png-clipart/20211009/original/pngtree-lettuce-vector-png-image_6849304.png',
