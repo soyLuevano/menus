@@ -36,11 +36,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Mostrar una hamburguesa al hacer clic en la pantalla o mover el mouse
     document.addEventListener('click', function(event) {
-        createFoodImage(event.clientX, event.clientY);
+        createFoodImage(event.pageX, event.pageY);
     });
 
     document.addEventListener('mousemove', function(event) {
-        createFoodImage(event.clientX, event.clientY);
+        createFoodImage(event.pageX, event.pageY);
     });
 
     function createFoodImage(x, y) {
@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
         hamburguesaImage.style.top = `${y}px`;
         hamburguesaImage.style.width = '50px';  // Ajusta el ancho de la imagen
         hamburguesaImage.style.height = 'auto'; // Mantén la proporción automáticamente
+        hamburguesaImage.style.pointerEvents = 'none'; // Permitir clics a través de la hamburguesa
         document.body.appendChild(hamburguesaImage);
     
         // Eliminar la hamburguesa después de un tiempo
