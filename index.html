@@ -15,6 +15,7 @@
     <main>
         <section id="entradas">
             <h2>Hamburguesa </h2>
+            <button id="ver-ingredientes">Ver ingredientes</button>
             <ul>
                 <li>
                     <img src="https://mandolina.co/wp-content/uploads/2021/03/610747100-1.jpg" alt="Hamburguesa">
@@ -38,6 +39,7 @@
                 </li>
             </ul>
         </section>
+        
               
         </section>
         <section id="Hotdog">
@@ -89,6 +91,17 @@
         <img src="https://images.vexels.com/content/230823/preview/happy-hamburger-cartoon-b52c74.png" alt="Hamburguesa">
         <img src="https://images.vexels.com/content/149877/preview/hotdog-character-cartoon-897c9e.png" alt="Hotdog con Todo">
     </div>
+    <script>
+        function redirectToDesktop() {
+            // Cambia el tamaño de la ventana para forzar el modo de escritorio
+            window.resizeTo(1200, window.outerHeight); // Ajusta el ancho según sea necesario
+            window.focus();
+        }
+    
+        document.querySelector('#ver-ingredientes').addEventListener('click', redirectToDesktop);
+    </script>
+    
+
     <script src="menu.js"></script>
 </body>
 </html>
@@ -118,4 +131,3 @@
         mostrarFooter();
     });
     </script>
-    
