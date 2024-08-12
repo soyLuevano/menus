@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
-    overflow-x: hidden; /* Evita barras de desplazamiento horizontal */
+    overflow-x: hidden;
 }
 
 header {
@@ -69,6 +69,7 @@ li {
     border: 1px solid #ddd;
     display: flex;
     align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a la pantalla */
 }
 
 li img {
@@ -76,6 +77,10 @@ li img {
     height: 100px;
     margin-right: 1rem;
     border-radius: 10%;
+}
+
+li span {
+    flex: 1; /* Asegura que el texto ocupe el espacio disponible */
 }
 
 footer {
@@ -143,13 +148,14 @@ footer {
     }
 
     li {
-        display: block; /* Asegura que los elementos ocupen todo el ancho disponible */
-        text-align: left;
+        flex-direction: column; /* Acomoda elementos verticalmente en móviles */
+        align-items: flex-start;
     }
 
     li img {
-        margin: 0 auto 1rem; /* Centra la imagen y añade espacio debajo */
-        display: block;
+        margin-bottom: 1rem; /* Añade espacio debajo de la imagen */
+        width: 80px; /* Ajuste del tamaño de la imagen en móviles */
+        height: 80px;
     }
 
     .ingredientes, .ingredientesCombo {
