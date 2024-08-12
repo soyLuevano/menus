@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Evita barras de desplazamiento horizontal */
 }
 
 header {
@@ -12,45 +12,74 @@ header {
     color: white;
     text-align: center;
     padding: 4rem 0;
-    position: relative;
+    position: relative; /* Necesario para posicionar la imagen y el título superpuesto */
 }
 
 header .overlay-image {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 145px;
-    height: auto;
-    z-index: 1;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición al centro */
+    width: 145px; /* Ajusta según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    z-index: 1; /* Asegura que la imagen esté por encima del fondo */
 }
 
 header .title {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -55%);
-    z-index: 2;
-    color: white;
-    font-size: 2rem;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -55%); /* Ajusta la posición al centro */
+    z-index: 2; /* Asegura que el título esté por encima de la imagen */
+    color: white; /* Asegura que el texto sea visible */
+    font-size: 2rem; /* Ajusta el tamaño del texto según sea necesario */
 }
+
 
 main {
     padding: 1rem;
 }
 
-.ingredientes, .ingredientesCombo {
-    color: purple;
-    font-family: 'Verdana', sans-serif;
+.ingredientes {
+    color: purple; /* Cambia este valor por el color que prefieras */
+    font-family: 'Verdana', sans-serif; /* Cambia este valor por la fuente que prefieras */
+  
+}
+.ingredientesCombo {
+    color: purple; /* Cambia este valor por el color que prefieras */
+    font-family: 'Verdana', sans-serif; /* Cambia este valor por la fuente que prefieras */
 }
 
 .especial .ingredientes {
-    color: purple;
-    font-family: 'arial', sans-serif;
-    margin-left: -1px;
+    color: purple; /* Cambia el color solo para la Hamburguesa Especial */
+    font-family: 'arial', sans-serif; /* Cambia la fuente solo para la Hamburguesa Especial */
+    margin-left: -1px; /* Ajusta el margen si es necesario */
 }
 
-h2, h3 {
+
+/* Ocultar los ingredientes en dispositivos móviles */
+@media (max-width: 768px) {
+    .ingredientes {
+        display: none;
+    }
+}
+
+/* Mostrar los ingredientes en dispositivos de escritorio */
+@media (min-width: 769px) {
+    .ingredientes {
+        display: inline;
+    }
+}
+
+
+
+h2 {
+    color: #333;
+    background-color: #ffcc00;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+h3 {
     color: #333;
     background-color: #ffcc00;
     padding: 0.5rem;
@@ -69,18 +98,13 @@ li {
     border: 1px solid #ddd;
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten a la pantalla */
 }
 
 li img {
-    width: 100px;
-    height: 100px;
+    width: 100px;  /* Ajusta el tamaño según sea necesario */
+    height: 100px; /* Ajusta el tamaño según sea necesario */
     margin-right: 1rem;
     border-radius: 10%;
-}
-
-li span {
-    flex: 1; /* Asegura que el texto ocupe el espacio disponible */
 }
 
 footer {
@@ -91,9 +115,11 @@ footer {
     width: 100%;
     position: fixed;
     bottom: 0;
-    z-index: 999;
-    display: none;
+    z-index: 999; /* Asegura que el footer esté sobre la lluvia de comida y otros elementos */
+    display: none; /* Oculto por defecto */
 }
+
+
 
 #food-rain {
     position: fixed;
@@ -102,13 +128,13 @@ footer {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 1000;
+    z-index: 1000; /* Asegura que la lluvia de comida esté por encima del contenido */
 }
 
 .food {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: 50px; /* Ajusta el tamaño según sea necesario */
     pointer-events: none;
     animation: fall linear infinite;
 }
@@ -141,34 +167,6 @@ footer {
     background-color: #e64e2e;
 }
 
-/* Ajustes para dispositivos móviles */
-@media (max-width: 768px) {
-    header .title {
-        font-size: 1.5rem;
-    }
 
-    li {
-        flex-direction: column; /* Acomoda elementos verticalmente en móviles */
-        align-items: flex-start;
-    }
 
-    li img {
-        margin-bottom: 1rem; /* Añade espacio debajo de la imagen */
-        width: 80px; /* Ajuste del tamaño de la imagen en móviles */
-        height: 80px;
-    }
 
-    .ingredientes, .ingredientesCombo {
-        font-size: 14px; /* Ajusta el tamaño de la fuente */
-    }
-
-    h2, h3 {
-        font-size: 1.5rem;
-        padding: 0.3rem;
-    }
-
-    #comentarios button {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-    }
-}
