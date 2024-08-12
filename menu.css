@@ -20,7 +20,7 @@ header .overlay-image {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 145px; 
+    width: 145px;
     height: auto;
     z-index: 1;
 }
@@ -69,7 +69,6 @@ li {
     border: 1px solid #ddd;
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* Permite que el texto se ajuste en pantallas pequeñas */
 }
 
 li img {
@@ -140,36 +139,30 @@ footer {
 /* Ajustes para dispositivos móviles */
 @media (max-width: 768px) {
     header .title {
-        font-size: 1.5rem; /* Ajusta el tamaño del título en pantallas pequeñas */
+        font-size: 1.5rem;
     }
 
     li {
-        flex-direction: column; /* Cambia la disposición a columna para pantallas pequeñas */
-        text-align: center; /* Centra el texto y la imagen */
+        display: block; /* Asegura que los elementos ocupen todo el ancho disponible */
+        text-align: left;
     }
 
     li img {
-        margin-right: 0;
-        margin-bottom: 1rem; /* Añade espacio debajo de la imagen */
+        margin: 0 auto 1rem; /* Centra la imagen y añade espacio debajo */
+        display: block;
     }
 
     .ingredientes, .ingredientesCombo {
-        font-size: 14px; /* Reduce el tamaño de la fuente para pantallas pequeñas */
+        font-size: 14px; /* Ajusta el tamaño de la fuente */
     }
 
     h2, h3 {
-        font-size: 1.5rem; /* Ajusta el tamaño de los encabezados en pantallas pequeñas */
-        padding: 0.3rem; /* Ajusta el padding para encajar mejor en pantallas pequeñas */
+        font-size: 1.5rem;
+        padding: 0.3rem;
     }
 
     #comentarios button {
         padding: 0.5rem 1rem;
-        font-size: 0.9rem; /* Reduce el tamaño del botón en pantallas pequeñas */
+        font-size: 0.9rem;
     }
 }
-
-
-
-
-
-
