@@ -5,6 +5,12 @@ body {
     background-color: #f8f8f8;
     overflow-x: hidden; /* Evita barras de desplazamiento horizontal */
 }
+@media (max-width: 768px) {
+    #entradas ul li img {
+        width: 100%; /* Ajusta el tamaño para pantallas pequeñas */
+        height: auto;
+    }
+}
 
 header {
     background-image: url('https://img.freepik.com/fotos-premium/ilustracion-fondo-pantalla-hamburguesas-ai-generativo_751108-3911.jpg'); 
