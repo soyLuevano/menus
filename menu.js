@@ -63,6 +63,46 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Función para mostrar/ocultar ingredientes
+    function toggleIngredients(event) {
+        var button = event.target;
+        var listItem = button.parentElement;
+        var ingredientesCombo = listItem.querySelector(".ingredientesCombo");
+        var details = listItem.querySelector(".details");
+
+        if (ingredientesCombo.style.display === "block") {
+            ingredientesCombo.style.display = "none";
+            button.style.display = "block"; // Mostrar el botón de nuevo
+        } else {
+            ingredientesCombo.style.display = "block";
+            button.style.display = "none"; // Ocultar el botón
+        }
+
+        if (details.style.display === "block") {
+            details.style.display = "none";
+            button.style.display = "block"; // Mostrar el botón de nuevo
+        } else {
+            details.style.display = "block";
+            button.style.display = "none"; // Ocultar el botón
+        }
+
+    }
+
+    // Añadir event listener a todos los botones
+    var buttons = document.querySelectorAll(".show-ingredients");
+    buttons.forEach(function(button) {
+        button.addEventListener("click", toggleIngredients);
+    });
+    var buttons = document.querySelectorAll(".ingredientesCombo");
+    buttons.forEach(function(button) {
+        button.addEventListener("click", toggleIngredients);
+    });
+});
+
+
 // Función para iniciar el juego cuando se presiona el botón
 function showComments() {
     const modalContainer = document.createElement('div');
