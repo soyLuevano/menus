@@ -1,178 +1,177 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    overflow-x: hidden; /* Evita barras de desplazamiento horizontal */
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
 
-header {
-    background-image: url('https://img.freepik.com/fotos-premium/ilustracion-fondo-pantalla-hamburguesas-ai-generativo_751108-3911.jpg'); 
-    background-color: transparent; 
-    color: white;
-    text-align: center;
-    padding: 4rem 0;
-    position: relative; /* Necesario para posicionar la imagen y el título superpuesto */
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú del Restaurante</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <header>
+        <img src="https://media.discordapp.net/attachments/1123485429862244463/1261053287948357663/Sin_titulo-2.png?ex=66ba6d65&is=66b91be5&hm=a85d82ee119c85e7bda9cad3acf1ec04796adfbdee49800db1b5b04b793cc846&=&format=webp&quality=lossless&width=556&height=556" class="overlay-image" alt="Imagen superpuesta">
+        <h1 class="title">Hamburguesas "El Pitbull"</h1>
+    </header>
+    <main>
+        <section id="entradas">
+            <h2>Hamburguesa</h2>
+            <ul>
+                <li>
+                    <img src="https://mandolina.co/wp-content/uploads/2021/03/610747100-1.jpg" alt="Hamburguesa">
+                    Hamburguesa sencilla &nbsp;
+                    <div class="details">
+                        <span class="ingredientes">(Carne/Lechuga/Tomate/Aderezos)</span>
+                    </div>
+                    <span class="price">- $90</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="price">combo - $150</span> &nbsp;
+                    <span class="ingredientesCombo">(con papas y soda)</span>
+                    <button class="show-ingredients">Ver ingredientes</button>
+                </li>
+                <li>
+                    <img src="https://static.wixstatic.com/media/196ca8_6773e5c607b447b7b20f5db3c65199ea~mv2.jpeg/v1/fill/w_980,h_490,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/196ca8_6773e5c607b447b7b20f5db3c65199ea~mv2.jpeg" alt="Hamburguesa">
+                    Hamburguesa con tocino &nbsp;
+                    <div class="details">
+                        <span class="ingredientes">(Carne/Tocino crujiente/Lechuga/Tomate/Jamon/Aderezos)</span>
+                    </div>
+                    <span class="price">- $110</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="price">combo - $170</span> &nbsp;
+                    <span class="ingredientesCombo">(con papas y soda)</span>
+                    <button class="show-ingredients">Ver ingredientes</button>
+                </li>
+                <li>
+                    <img src="https://mandolina.co/wp-content/uploads/2021/03/610747100-1.jpg" alt="Hamburguesa">
+                    Hamburguesa doble carne &nbsp;
+                    <div class="details">
+                        <span class="ingredientes">(2 Carnes/Jamon/Queso amarillo/Lechuga/Tomate/Aderezos)</span>
+                    </div>
+                    <span class="price">- $130</span> &nbsp;
+                    <span class="price">combo - $190</span> &nbsp;
+                    <span class="ingredientesCombo">(con papas y soda)</span>
+                    <button class="show-ingredients">Ver ingredientes</button>
+                </li>
+                <li class="especial">
+                    <img src="https://www.carniceriademadrid.es/wp-content/uploads/2022/09/smash-burger-que-es.jpg" alt="Hamburguesa">
+                    Hamburguesa Especial &nbsp;
+                    <div class="details">
+                        <span class="ingredientes">(2 Carnes/Tocino/Jamon/Haros de cebolla/Lechuga Romana/Tomate/Aderezos)</span>
+                    </div>
+                    <span class="price">- $140</span> &nbsp;
+                    <span class="price">combo - $210</span> &nbsp;
+                    <span class="ingredientesCombo">(con papas y soda)</span>
+                    <button class="show-ingredients">Ver ingredientes</button>
+                </li>
+                <li class="especial">
+                    <img src="https://mandolina.co/wp-content/uploads/2021/03/610747100-1.jpg" alt="Hamburguesa">
+                    Hamburguesa Pit bull &nbsp;
+                    <div class="details">
+                        <span class="ingredientes">(Carne/Costra de queso/Lechuga/Guacamole/Cebolla caramelizada/Aderezos)</span>
+                    </div>
+                    <span class="price">- $160</span> &nbsp;
+                    <span class="price">combo - $220</span> &nbsp;
+                    <span class="ingredientesCombo">(con papas y soda)</span>
+                    <button class="show-ingredients">Ver ingredientes</button>
+                </li>
+            </ul>
+        </section>
+        
+        <section id="Hotdog">
+            <h2>Hotdog</h2>
+            <ul>
+                <li>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYIHc-BopECpPQy1e9mQySDGu-8npsa3ckZg&s" alt="Hotdog">
+                    Hotdog sencillo &nbsp;
+                    <div class="details">
+                        <span class="ingredientes">(Salchicha/Tomate/Cebolla/Aderezos)</span>
+                    </div>
+                    <span class="price">- $55</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="price">combo - $115</span> &nbsp;
+                    <span class="ingredientesCombo">(con papas y soda)</span>
+                    <button class="show-ingredients">Ver ingredientes</button>
+                </li>
+                <li>
+                    <img src="https://carniceriaangel.com/wp-content/uploads/2022/02/recetas-hot-dogs.jpg" alt="Hotdog">
+                    Hotdog Especial &nbsp;
+                    <div class="details">
+                        <span class="ingredientes">(Salchicha/Tomate/Queso de nachos/Tocino/Aderezos)</span>
+                    </div>
+                    <span class="price">- $70</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="price">combo - $130</span> &nbsp;
+                    <span class="ingredientesCombo">(con papas y soda)</span>
+                    <button class="show-ingredients">Ver ingredientes</button>
+                </li>
+                <li class="especial">
+                    <img src="https://carniceriaangel.com/wp-content/uploads/2022/02/recetas-hot-dogs.jpg" alt="Hotdog">
+                    Hotdog Pitbull &nbsp;
+                    <div class="details">
+                        <span class="ingredientes">(Salchicha/Queso amarillo/Queso de nachos/Tocino/Chettos Flaming Hot/Aderezos)</span>
+                    </div>
+                    <span class="price">- $95</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="price">combo - $155</span> &nbsp;
+                    <span class="ingredientesCombo">(con papas y soda)</span>
+                    <button class="show-ingredients">Ver ingredientes</button>
+                </li>
+            </ul>
+        </section>        
+        <section id="extras">
+            <h2>Extra</h2>
+            <ul>
+                <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNA4WLoOJjR5xcfHROKHZf61sZir8K8EpYlw&s" alt="Hamburguesa">aqui se arregla cuando se acabe el menu - $15</li>
+                <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYIHc-BopECpPQy1e9mQySDGu-8npsa3ckZg&s" alt="Hotdog">aqui se arregla cuando se acabe el menu - $12</li>
+            </ul>
+        </section>
+        <section id="bebidas">
+            <h2>bebidas</h2>
+            <ul>
+                <li>Arizona 600ml - $6</li>
+                <li>CocaCola 500ml - $5</li>
+                <li>Gatore - $5</li>
+                <li>cafe - $5</li>
+            </ul>
 
-header .overlay-image {
-    position: absolute;
-    top: 50%; /* Centra verticalmente */
-    left: 50%; /* Centra horizontalmente */
-    transform: translate(-50%, -50%); /* Ajusta la posición al centro */
-    width: 145px; /* Ajusta según sea necesario */
-    height: auto; /* Mantiene la proporción de la imagen */
-    z-index: 1; /* Asegura que la imagen esté por encima del fondo */
-}
-
-header .title {
-    position: absolute;
-    top: 50%; /* Centra verticalmente */
-    left: 50%; /* Centra horizontalmente */
-    transform: translate(-50%, -55%); /* Ajusta la posición al centro */
-    z-index: 2; /* Asegura que el título esté por encima de la imagen */
-    color: white; /* Asegura que el texto sea visible */
-    font-size: 2rem; /* Ajusta el tamaño del texto según sea necesario */
-}
-
-
-main {
-    padding: 1rem;
-}
-
-.ingredientes {
-    color: purple; /* Cambia este valor por el color que prefieras */
-    font-family: 'Verdana', sans-serif; /* Cambia este valor por la fuente que prefieras */
-  
-}
-.ingredientesCombo {
-    color: purple; /* Cambia este valor por el color que prefieras */
-    font-family: 'Verdana', sans-serif; /* Cambia este valor por la fuente que prefieras */
-}
-
-.especial .ingredientes {
-    color: purple; /* Cambia el color solo para la Hamburguesa Especial */
-    font-family: 'arial', sans-serif; /* Cambia la fuente solo para la Hamburguesa Especial */
-    margin-left: -1px; /* Ajusta el margen si es necesario */
-}
-
-.price {
-    display: inline;
-    margin-top: 1px;
-}
-
-.details {
-    display: none; /* Ocultas por defecto */
-    margin-top: 1px;
-}
-
-.ingredientesCombo {
-    display: none; /* Oculta los ingredientes del combo por defecto */
-}
-
-.show-ingredients {
-    display: block;
-    margin-top: 1px;
-}
-
-
-
-
-h2 {
-    color: #333;
-    background-color: #ffcc00;
-    padding: 0.5rem;
-    border-radius: 5px;
-}
-h3 {
-    color: #333;
-    background-color: #ffcc00;
-    padding: 0.5rem;
-    border-radius: 5px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    background-color: white;
-    margin: 0.5rem 0;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    display: flex;
-    align-items: center;
-}
-
-li img {
-    width: 100px;  /* Ajusta el tamaño según sea necesario */
-    height: 100px; /* Ajusta el tamaño según sea necesario */
-    margin-right: 1rem;
-    border-radius: 10%;
-}
-
-footer {
-    background-color: #ff5733;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    z-index: 999; /* Asegura que el footer esté sobre la lluvia de comida y otros elementos */
-    display: none; /* Oculto por defecto */
-}
-
-
-
-#food-rain {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1000; /* Asegura que la lluvia de comida esté por encima del contenido */
-}
-
-.food {
-    position: absolute;
-    width: 50px; /* Ajusta el tamaño según sea necesario */
-    height: 50px; /* Ajusta el tamaño según sea necesario */
-    pointer-events: none;
-    animation: fall linear infinite;
-}
-
-@keyframes fall {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(100vh);
-    }
-}
-
-#comentarios {
-    text-align: center;
-    margin-top: 2rem;
-}
-
-#comentarios button {
-    background-color: #ff5733;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#comentarios button:hover {
-    background-color: #e64e2e;
-}
-
-
-
-
+        <section id="comentarios">
+            <button onclick="showComments()">juega mientras esperas</button>
+        </section>
+        
+    </main>
+    <footer id="footer">
+        <p>&copy; 2024 Nuevo Milenio Calle Nicolas bravo #4747</p>
+        <img src="https://petfriendly.co.za/wp-content/uploads/2021/03/Pet-friendly-logo-variations-01-1024x1024.png" alt="PetFriendly Logo" style="width:50px;height:50px;">
+    </footer>
+    <div id="food-rain"></div> <!-- Contenedor para la lluvia de comida -->
+    <div id="food-images" style="display: none;">
+        <!-- Aquí poner las imágenes de la lluvia -->
+        <img src="https://png.pngtree.com/png-clipart/20230913/original/pngtree-nachos-clipart-yellow-crispy-cheesy-nachos-on-a-plate-cartoon-vector-png-image_11059352.png" alt="nachos">
+        <img src="https://images.vexels.com/content/230823/preview/happy-hamburger-cartoon-b52c74.png" alt="Hamburguesa">
+        <img src="https://images.vexels.com/content/149877/preview/hotdog-character-cartoon-897c9e.png" alt="Hotdog con Todo">
+    </div>
+    
+    <script src="menu.js"></script>
+</body>
+</html>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var footer = document.querySelector("footer");
+    
+        function mostrarFooter() {
+            // Altura total del documento
+            var alturaTotal = document.documentElement.scrollHeight;
+            // Altura visible en la ventana del navegador
+            var alturaVisible = window.innerHeight;
+            // Posición actual de desplazamiento vertical
+            var scrollVertical = window.scrollY || window.pageYOffset;
+    
+            // Si la posición de desplazamiento más la altura visible es mayor o igual a la altura total, muestra el footer
+            if (scrollVertical + alturaVisible >= alturaTotal) {
+                footer.style.display = "block"; // o "flex", "inline", etc., según el caso
+            } else {
+                footer.style.display = "none"; // Oculta el footer si no se cumple la condición
+            }
+        }
+    
+        // Escucha el evento de scroll para verificar cuándo mostrar el footer
+        window.addEventListener("scroll", mostrarFooter);
+        // Verifica al cargar la página por si ya se está en el final
+        mostrarFooter();
+    });
+    </script>
     
