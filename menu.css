@@ -6,22 +6,23 @@ body, h1, h2, h3, ul, li, p {
 
 /* Estilo general del body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #f0f0f0;
     overflow-x: hidden; /* Evita barras de desplazamiento horizontal */
 }
 
 /* Estilo del header */
 header {
     background-image: url('https://img.freepik.com/fotos-premium/ilustracion-fondo-pantalla-hamburguesas-ai-generativo_751108-3911.jpg');
-    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
-    background-position: center; /* Centra la imagen */
+    background-size: cover;
+    background-position: center;
     color: white;
     text-align: center;
-    padding: 4rem 1rem; /* Padding adaptativo */
+    padding: 4rem 1rem; /* Padding adaptativo para móviles */
     position: relative;
+    border-bottom: 5px solid #ffcc00; /* Añade una línea decorativa en la parte inferior del header */
 }
 
 header .overlay-image {
@@ -29,7 +30,7 @@ header .overlay-image {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 145px;
+    width: 120px; /* Ajuste del tamaño para móviles */
     height: auto;
     z-index: 1;
 }
@@ -38,41 +39,43 @@ header .title {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -55%);
+    transform: translate(-50%, -40%);
     z-index: 2;
     color: white;
-    font-size: 2rem;
+    font-size: 2.5rem; /* Tamaño más pequeño para móviles */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra de texto para mejor legibilidad */
 }
 
 /* Estilo del main */
 main {
-    padding: 1rem;
+    padding: 1rem; /* Padding reducido para móviles */
 }
 
 /* Estilo de los ingredientes */
 .ingredientes, .ingredientesCombo {
-    color: purple;
+    color: #6a0dad; /* Color más atractivo */
     font-family: 'Verdana', sans-serif;
 }
 
 .especial .ingredientes {
-    color: purple;
+    color: #ff4500; /* Color específico para hamburguesas especiales */
     font-family: 'Arial', sans-serif;
-    margin-left: -1px;
 }
 
 .price {
     display: inline;
     margin-top: 1px;
+    color: #ff4500; /* Color para el precio */
 }
 
 .details {
-    display: none; /* Ocultas por defecto */
+    display: none;
     margin-top: 1px;
 }
 
 .ingredientesCombo {
-    display: none; /* Oculta los ingredientes del combo por defecto */
+    display: none;
 }
 
 .show-ingredients {
@@ -82,10 +85,12 @@ main {
 
 /* Estilo de los encabezados */
 h2, h3 {
-    color: #333;
-    background-color: #ffcc00;
-    padding: 0.5rem;
-    border-radius: 5px;
+    color: #fff;
+    background-color: #ff5733;
+    padding: 0.75rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un efecto de profundidad */
+    margin-bottom: 1rem;
 }
 
 /* Estilo de las listas */
@@ -97,15 +102,23 @@ ul {
 li {
     background-color: white;
     margin: 0.5rem 0;
-    padding: 0.5rem;
+    padding: 1rem;
+    border-radius: 8px;
     border: 1px solid #ddd;
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en diferentes tamaños de pantalla */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para los elementos de la lista */
+    transition: transform 0.2s, box-shadow 0.2s;
+    flex-wrap: wrap; /* Permite que el contenido se ajuste */
+}
+
+li:hover {
+    transform: scale(1.02); /* Efecto de escala al pasar el ratón */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el ratón */
 }
 
 li img {
-    width: 100px;
+    width: 100px; /* Tamaño reducido para móviles */
     height: 100px;
     margin-right: 1rem;
     border-radius: 10%;
@@ -116,12 +129,12 @@ footer {
     background-color: #ff5733;
     color: white;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1rem;
     width: 100%;
     position: fixed;
     bottom: 0;
     z-index: 999;
-    display: none; /* Oculto por defecto */
+    border-top: 5px solid #ffcc00; /* Línea decorativa en la parte superior del footer */
 }
 
 /* Estilo de la lluvia de comida */
@@ -137,8 +150,8 @@ footer {
 
 .food {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     pointer-events: none;
     animation: fall linear infinite;
 }
@@ -166,43 +179,45 @@ footer {
     font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
 }
 
 #comentarios button:hover {
     background-color: #e64e2e;
+    transform: scale(1.05); /* Efecto de escala al pasar el ratón */
 }
 
 /* Diseño responsivo */
 @media (max-width: 768px) {
     header .title {
-        font-size: 1.5rem; /* Tamaño de fuente adaptado */
+        font-size: 2rem;
     }
     
     li {
-        flex-direction: column; /* Los elementos de la lista se apilan verticalmente */
+        flex-direction: column;
         align-items: flex-start;
     }
     
     li img {
-        width: 80px; /* Tamaño de imagen adaptado */
+        width: 80px; /* Tamaño ajustado */
         height: 80px;
     }
 }
 
 @media (max-width: 480px) {
     header .title {
-        font-size: 1.2rem; /* Tamaño de fuente aún más pequeño */
+        font-size: 1.5rem;
     }
     
     li img {
-        width: 60px; /* Tamaño de imagen aún más pequeño */
+        width: 60px; /* Tamaño ajustado */
         height: 60px;
     }
     
     #comentarios button {
-        padding: 0.75rem 1.5rem; /* Ajusta el tamaño del botón en pantallas pequeñas */
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
     }
 }
-
 
 
