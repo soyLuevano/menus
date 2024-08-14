@@ -10,7 +10,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
-    overflow-x: hidden; /* Evita barras de desplazamiento horizontal */
+    overflow-x: auto; /* Evita barras de desplazamiento horizontal */
 }
 
 /* Estilo del header */
@@ -55,11 +55,13 @@ main {
 /* Estilo de los ingredientes */
 .ingredientes, .ingredientesCombo {
     color: #6a0dad; /* Color más atractivo */
+    margin-top: 0.1rem; /* Reducir el margen superior */
+    padding: 0; /* Ajustar el relleno */
     font-family: 'Verdana', sans-serif;
 }
 
 .especial .ingredientes {
-    color: #ff4500; /* Color específico para hamburguesas especiales */
+    color: #FF00FF; /* Color específico para hamburguesas especiales */
     font-family: 'Arial', sans-serif;
 }
 
@@ -108,20 +110,27 @@ li {
     display: flex;
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para los elementos de la lista */
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
     flex-wrap: wrap; /* Permite que el contenido se ajuste */
 }
 
 li:hover {
-    transform: scale(1.02); /* Efecto de escala al pasar el ratón */
+    transform: scale(1.05); /* Efecto de escala al pasar el ratón */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el ratón */
+    filter: brightness(1.1); /* Aumenta el brillo al pasar el ratón */
 }
 
 li img {
-    width: 100px; /* Tamaño reducido para móviles */
-    height: 100px;
+    width: 150px; /* Tamaño aumentado para dar prioridad a las imágenes */
+    height: 150px;
     margin-right: 1rem;
     border-radius: 10%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+li img:hover {
+    transform: scale(1.1); /* Efecto de escala al pasar el ratón */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el ratón */
 }
 
 /* Estilo del footer */
@@ -195,12 +204,12 @@ footer {
     
     li {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center; /* Centra los elementos en dispositivos medianos */
     }
     
     li img {
-        width: 80px; /* Tamaño ajustado */
-        height: 80px;
+        width: 120px; /* Tamaño ajustado para pantallas medianas */
+        height: 120px;
     }
 }
 
@@ -209,9 +218,14 @@ footer {
         font-size: 1.5rem;
     }
     
+    li {
+        padding: 0.5rem; /* Reduce el padding para pantallas pequeñas */
+        text-align: center; /* Centra el texto */
+    }
+    
     li img {
-        width: 60px; /* Tamaño ajustado */
-        height: 60px;
+        width: 100px; /* Tamaño ajustado para pantallas pequeñas */
+        height: 100px;
     }
     
     #comentarios button {
@@ -219,5 +233,3 @@ footer {
         font-size: 0.9rem;
     }
 }
-
-
