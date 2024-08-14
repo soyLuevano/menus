@@ -1,3 +1,10 @@
+/* Reseteo de márgenes y relleno */
+body, h1, h2, h3, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo general del body */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,54 +13,52 @@ body {
     overflow-x: hidden; /* Evita barras de desplazamiento horizontal */
 }
 
+/* Estilo del header */
 header {
-    background-image: url('https://img.freepik.com/fotos-premium/ilustracion-fondo-pantalla-hamburguesas-ai-generativo_751108-3911.jpg'); 
-    background-color: transparent; 
+    background-image: url('https://img.freepik.com/fotos-premium/ilustracion-fondo-pantalla-hamburguesas-ai-generativo_751108-3911.jpg');
+    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+    background-position: center; /* Centra la imagen */
     color: white;
     text-align: center;
-    padding: 4rem 0;
-    position: relative; /* Necesario para posicionar la imagen y el título superpuesto */
+    padding: 4rem 1rem; /* Padding adaptativo */
+    position: relative;
 }
 
 header .overlay-image {
     position: absolute;
-    top: 50%; /* Centra verticalmente */
-    left: 50%; /* Centra horizontalmente */
-    transform: translate(-50%, -50%); /* Ajusta la posición al centro */
-    width: 145px; /* Ajusta según sea necesario */
-    height: auto; /* Mantiene la proporción de la imagen */
-    z-index: 1; /* Asegura que la imagen esté por encima del fondo */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 145px;
+    height: auto;
+    z-index: 1;
 }
 
 header .title {
     position: absolute;
-    top: 50%; /* Centra verticalmente */
-    left: 50%; /* Centra horizontalmente */
-    transform: translate(-50%, -55%); /* Ajusta la posición al centro */
-    z-index: 2; /* Asegura que el título esté por encima de la imagen */
-    color: white; /* Asegura que el texto sea visible */
-    font-size: 2rem; /* Ajusta el tamaño del texto según sea necesario */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    z-index: 2;
+    color: white;
+    font-size: 2rem;
 }
 
-
+/* Estilo del main */
 main {
     padding: 1rem;
 }
 
-.ingredientes {
-    color: purple; /* Cambia este valor por el color que prefieras */
-    font-family: 'Verdana', sans-serif; /* Cambia este valor por la fuente que prefieras */
-  
-}
-.ingredientesCombo {
-    color: purple; /* Cambia este valor por el color que prefieras */
-    font-family: 'Verdana', sans-serif; /* Cambia este valor por la fuente que prefieras */
+/* Estilo de los ingredientes */
+.ingredientes, .ingredientesCombo {
+    color: purple;
+    font-family: 'Verdana', sans-serif;
 }
 
 .especial .ingredientes {
-    color: purple; /* Cambia el color solo para la Hamburguesa Especial */
-    font-family: 'arial', sans-serif; /* Cambia la fuente solo para la Hamburguesa Especial */
-    margin-left: -1px; /* Ajusta el margen si es necesario */
+    color: purple;
+    font-family: 'Arial', sans-serif;
+    margin-left: -1px;
 }
 
 .price {
@@ -75,22 +80,15 @@ main {
     margin-top: 1px;
 }
 
-
-
-
-h2 {
-    color: #333;
-    background-color: #ffcc00;
-    padding: 0.5rem;
-    border-radius: 5px;
-}
-h3 {
+/* Estilo de los encabezados */
+h2, h3 {
     color: #333;
     background-color: #ffcc00;
     padding: 0.5rem;
     border-radius: 5px;
 }
 
+/* Estilo de las listas */
 ul {
     list-style-type: none;
     padding: 0;
@@ -103,15 +101,17 @@ li {
     border: 1px solid #ddd;
     display: flex;
     align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en diferentes tamaños de pantalla */
 }
 
 li img {
-    width: 100px;  /* Ajusta el tamaño según sea necesario */
-    height: 100px; /* Ajusta el tamaño según sea necesario */
+    width: 100px;
+    height: 100px;
     margin-right: 1rem;
     border-radius: 10%;
 }
 
+/* Estilo del footer */
 footer {
     background-color: #ff5733;
     color: white;
@@ -120,12 +120,11 @@ footer {
     width: 100%;
     position: fixed;
     bottom: 0;
-    z-index: 999; /* Asegura que el footer esté sobre la lluvia de comida y otros elementos */
+    z-index: 999;
     display: none; /* Oculto por defecto */
 }
 
-
-
+/* Estilo de la lluvia de comida */
 #food-rain {
     position: fixed;
     top: 0;
@@ -133,13 +132,13 @@ footer {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 1000; /* Asegura que la lluvia de comida esté por encima del contenido */
+    z-index: 1000;
 }
 
 .food {
     position: absolute;
-    width: 50px; /* Ajusta el tamaño según sea necesario */
-    height: 50px; /* Ajusta el tamaño según sea necesario */
+    width: 50px;
+    height: 50px;
     pointer-events: none;
     animation: fall linear infinite;
 }
@@ -153,6 +152,7 @@ footer {
     }
 }
 
+/* Estilo para comentarios */
 #comentarios {
     text-align: center;
     margin-top: 2rem;
@@ -172,6 +172,37 @@ footer {
     background-color: #e64e2e;
 }
 
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    header .title {
+        font-size: 1.5rem; /* Tamaño de fuente adaptado */
+    }
+    
+    li {
+        flex-direction: column; /* Los elementos de la lista se apilan verticalmente */
+        align-items: flex-start;
+    }
+    
+    li img {
+        width: 80px; /* Tamaño de imagen adaptado */
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .title {
+        font-size: 1.2rem; /* Tamaño de fuente aún más pequeño */
+    }
+    
+    li img {
+        width: 60px; /* Tamaño de imagen aún más pequeño */
+        height: 60px;
+    }
+    
+    #comentarios button {
+        padding: 0.75rem 1.5rem; /* Ajusta el tamaño del botón en pantallas pequeñas */
+    }
+}
 
 
 
